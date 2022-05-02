@@ -1,54 +1,52 @@
-<!doctype html>
-<html lang="en" class="h-100">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Youtube thumbnail extraction tool">
-    <meta name="author" content="BiswajeetRay7">
-    <meta name="generator" content="notepad">
-    <title>YThumb</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="author" content="BiswajeetRay7" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YTumb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/normalize.css" />
+    <link rel="stylesheet" href="./src/css/app.css" />
   </head>
-  <body class="d-flex flex-column h-100 text-center">
-     
-  <header>
-    <nav class="navbar navbar-light fixed-top bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.linkedin.com/in/biswajeet-ray-397742200/">Developer</a>
-        
+  <body>
+    <header></header>
+    <main>
+      <section class="home">
+        <h1>YThumb</h1>
+        <p class="tagline">
+          Paste a Youtube link below and press "Go!" to extract pictures of a
+          Youtube video
+        </p>
+        <form class="form" action="action_page.php">
+          <input
+            type="text"
+            placeholder="https://www.youtube.com/watch?v=vWJZLPeOpvw"
+            value="https://www.youtube.com/watch?v=Dlne8IDlC00"
+            name="search"
+            class="input"
+          />
+          <button type="submit">Go!</button>
+        </form>
+      </section>
+      <section class="result" id="result"></section>
+    </main>
+    <footer>
+      <div>
+        <p>
+          Made with ❤ by
+          <a href="https://github.com/BiswajeetRay7/">Biswajeet</a> &
+          <a href="https://github.com/7ORP3DO/">7ORP3DO</a>
+        </p>
       </div>
-    </nav>
-  </header>
-  
-  <main class="flex-shrink-0">
-    <div class="container">
-      <div class="row justify-content-md-center" style="padding-top: 20px;">
-      <h1 class="mt-5">YThumb</h1>
-         <div class="row justify-content-md-center">
-         <label for="yturlinput" class="form-label">Paste a Youtube link below and press "Go!" to extract data and pictures of a Youtube video</label>
-         <div class="col-6">
-            <input type="text" class="form-control" id="yturlinput" name="yturlinput" aria-describedby="yturlhelp" placeholder="https://www.youtube.com/watch?v=... or https://youtu.be/..." required>
-         </div>
-         <div class="col-auto">
-            <button class="btn btn-danger" onclick="extract()">Go!</button>
-         </div>   
-         </div>
-      </div>
-      <div class="row justify-content-md-center" style="padding-top: 10px;" id="ytresult"></div>
-      <div class="row justify-content-md-center" style="padding-top: 10px;" id="ytimages"></div>
-    </div>
-  </main>
-  
-  <footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-    
-      <span class="text-muted">&copy Biswajeet Ray 2022</span>
-      <i class="fa fa-cog fa-spin" style="font-size:24px"></i>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      
+    </footer>
+    <script src="./src/javascript/jquery.min.js"></script>
+    <script src="./src/javascript/app.js"></script>
   </body>
 </html>
